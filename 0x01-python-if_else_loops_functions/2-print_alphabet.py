@@ -3,4 +3,4 @@ alphabets = ""
 for i in range(97, 123):
     alphabets += chr(i)
 
-print(alphabets);
+print(alphabets)
