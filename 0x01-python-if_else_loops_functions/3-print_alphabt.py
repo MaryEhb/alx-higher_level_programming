@@ -1,9 +1,4 @@
 #!/usr/bin/python3
-alphabets = ""
-char = ""
 for i in range(97, 123):
-    char = chr(i)
-    if char != 'q' and char != 'e':
-        alphabets += char
-
-print(alphabets)
+    if (i != ord('q') and i != ord('e')):
+        print("{}".format(chr(i)), end = "");
