@@ -37,6 +37,7 @@ class Square:
 
         Args:
             size: size
+            value: new value
         """
 
         if not isinstance(value, int):
