@@ -18,19 +18,21 @@ class Square:
             size: size of square
         """
 
-        self.size(size)
+        self.__size = size
 
     def area(self):
-        """return area
+        """Return area
         """
 
         return (self.__size)**2
 
+    @property
     def size(self):
-        """retrun size
+        """Retrun size
         """
-        return __size
+        return self.__size
 
+    @size.setter
     def size(self, value):
         """
         set size
