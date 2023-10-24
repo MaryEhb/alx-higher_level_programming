@@ -3,15 +3,16 @@
 
 
 class Square:
-    """square class
+    """
+    square class
 
     Attributes:
-        size: size
+        size: size of square
     """
     def __init__(self, size):
         """run when initialized
 
         Args:
-            size: size
+            size: size of square
         """
-        self.size = size
+        self.__size = size
