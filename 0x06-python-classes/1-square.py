@@ -8,4 +8,8 @@ class Square:
     size: size
     """
     def __init__(self, size):
+        """run when initialized
+        Args:
+        size: size
+        """
         self.size = size
