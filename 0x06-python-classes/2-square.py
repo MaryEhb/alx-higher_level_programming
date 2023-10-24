@@ -10,6 +10,7 @@ class Square:
         size: size of square
     """
     __size = 0
+
     def __init__(self, size=0):
         """run when initialized
 
@@ -17,7 +18,7 @@ class Square:
             size: size of square
         """
 
-        if type(size) != type(9):
+        if isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
