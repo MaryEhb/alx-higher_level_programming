@@ -7,21 +7,21 @@ class Rectangle:
     Rectangle
 
     Args:
-        __width: private int
-        __height: private int
+        width: private int
+        height: private int
     """
 
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
         """
-        Get __width
+        Get width
 
         Returns:
-            __width
+            width
         """
 
         return self.__width
@@ -29,7 +29,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """
-        Set __width
+        Set width
 
         Args:
             value: new width
@@ -49,10 +49,10 @@ class Rectangle:
     @property
     def height(self):
         """
-        Get __height
+        Get height
 
         Returns:
-            __height
+            height
         """
 
         return self.__height
@@ -60,7 +60,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """
-        Set __height
+        Set height
 
         Args:
             value: new height
