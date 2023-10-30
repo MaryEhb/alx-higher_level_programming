@@ -36,7 +36,7 @@ class Rectangle:
         Called when obj lifetime ends
         """
 
-        print("ye rectangle...")
+        print("Bye rectangle...")
 
     @property
     def width(self):
