@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-""" 5. Geometry module """
+"""
+------------------
+5. Geometry module
+------------------
+"""
 
 
 class BaseGeometry:
