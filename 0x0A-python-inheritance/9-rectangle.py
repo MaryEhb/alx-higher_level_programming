@@ -15,9 +15,13 @@ class Rectangle(BaseGeometry):
         self.__height = height
 
     def area(self):
-        """ area from w and h """
+        """ area from w and h
+        Returns: area
+        """
         return self.__width * self.__height
 
     def __str__(self):
-        """ returns string """
+        """ Special method
+        Returns: string
+        """
         return "[Rectangle] <{}>/<{}>".format(self.__width, self.__height)
