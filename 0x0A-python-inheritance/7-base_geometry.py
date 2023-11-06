@@ -10,18 +10,15 @@ class BaseGeometry:
     """ BaseGeometry (based on 6-base_geometry.py)"""
 
     def area(self):
-        """
-        Area that raise exception
-
-        Raises:
-            Exception: area is not implemented
-        """
-
+        """Not yet implemented."""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """
-        validate value
+        """Validate a parameter as an integer.
+
+        Args:
+            name (str): The name of the parameter.
+            value (int): The parameter to validate.
 
         Raises:
             TypeError: if value not int
