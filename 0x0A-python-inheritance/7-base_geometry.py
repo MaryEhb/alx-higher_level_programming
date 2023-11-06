@@ -6,7 +6,12 @@ class BaseGeometry:
     """ BaseGeometry (based on 6-base_geometry.py)"""
 
     def area(self):
-        """ Area that raise exception"""
+        """
+        Area that raise exception
+
+        Raises:
+            Exception: area is not implemented
+        """
 
         raise Exception("area() is not implemented")
 
