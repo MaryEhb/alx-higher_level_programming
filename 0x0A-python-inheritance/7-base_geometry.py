@@ -1,13 +1,9 @@
 #!/usr/bin/python3
-"""
-------------------
-5. Geometry module
-------------------
-"""
+"""7. Integer validator"""
 
 
 class BaseGeometry:
-    """ BaseGeometry (based on 6-base_geometry.py)"""
+    """BaseGeometry Class"""
 
     def area(self):
         """Not yet implemented."""
@@ -20,11 +16,10 @@ class BaseGeometry:
             name (str): The name of the parameter.
             value (int): The parameter to validate.
 
-        Raises:
+         Raises:
             TypeError: if value not int
             ValueError: if value less than zero
         """
-
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
