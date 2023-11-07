@@ -3,7 +3,7 @@
 
 def read_file(filename=""):
     """read file and print content"""
-    with open(filename, 'r') as file:
+    with open(filename, 'r', encoding="UTF-8") as file:
 
         for line in file:
             print(line.strip())
