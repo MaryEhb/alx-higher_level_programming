@@ -6,6 +6,8 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """Square class inhiret from Rect"""
+
     def __init__(self, size, x=0, y=0, id=None):
         """Initialization of square obj"""
         super().__init__(size, size, x, y, id)
