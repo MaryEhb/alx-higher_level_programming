@@ -2,6 +2,7 @@
 """1. Base class"""
 import json
 from os import path
+import csv
 
 
 class Base:
@@ -61,3 +62,38 @@ class Base:
             return []
         with open(file, "r", encoding="utf-8") as f:
             return [cls.create(**d) for d in cls.from_json_string(f.read())]
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """save to csv"""
+        from models.rectangle import Rectangle
+        from models.square import Square
+        if list_objs is not None:
+            with open('{}.csv'.format(cls.__name__), 'w', newline='') as f:
+                writer = csv.writer(f)
+                for o in list_objs:
+                    if o is Rectangle:
+                        writer.writerow([o.id, o.width, o.height, o.x, o.y])
+                    elif o is Square:
+                        writer.writerow([o.id, o.size, o.x, o.y])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """load from csv"""
+        from models.rectangle import Rectangle
+        from models.square import Square
+
+        file = "{}.csv".format(cls.__name__)
+        if not path.isfile(file):
+            return []
+
+        with open(file, "r", newline='') as f:
+            reader = csv.reader(f)
+            list_return = []
+            header = next(reader, None)
+
+            for row in reader:
+                d = {header[i]: int(row[i]) for i in range(len(header))}
+                list_return.append(cls.create(**d))
+
+            return list_return
