@@ -10,6 +10,8 @@ if (process.argv.length <= 3) {
     if (parseInt(process.argv[i]) > m) {
       n = m;
       m = parseInt(process.argv[i]);
+    } else if (parseInt(process.argv[i]) > n) {
+      n = parseInt(process.argv[i]);
     }
   }
   console.log(n);
