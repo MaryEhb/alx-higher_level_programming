@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function fact(a) {
+function fact (a) {
   if (a > 1) {
     return a * fact(a - 1);
   }
