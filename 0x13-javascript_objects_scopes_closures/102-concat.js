@@ -5,4 +5,4 @@ const fs = require('fs');
 const fileA = fs.readFileSync(process.argv[2]);
 const fileB = fs.readFileSync(process.argv[3]);
 
-fs.writeFileSync('fileC', fileA + fileB);
+fs.writeFileSync(process.argv[4], fileA + fileB);
