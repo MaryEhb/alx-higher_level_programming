@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""0. Get states starting by N"""
+"""1. Get states starting by N"""
 
 if __name__ == '__main__':
 
@@ -17,7 +17,7 @@ if __name__ == '__main__':
     cur = conn.cursor()
 
     cur.execute("SELECT * FROM states\
-                WHERE name LIKE 'N%' ORDER BY id ASC")
+                WHERE name LIKE BINARY 'N%' ORDER BY id ASC")
 
     query_rows = cur.fetchall()
 
