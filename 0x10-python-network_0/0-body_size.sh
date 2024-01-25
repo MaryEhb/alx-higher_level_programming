@@ -3,5 +3,5 @@
 
 if [ "$1" ]
 then
-	curl -I "$1" | grep -Fi "Content-Length" | awk '{print $2}'
+	curl -Is "$1" | grep -Fi "Content-Length" | awk '{print $2}'
 fi
