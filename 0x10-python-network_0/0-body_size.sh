@@ -1,7 +1,3 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 # 0. cURL body size
-
-if [ "$1" ]
-then
-	curl -Is "$1" | grep -Fi "Content-Length" | awk '{print $2}'
-fi
+curl -Is "$1" | grep -Fi "Content-Length" | awk '{print $2}'
