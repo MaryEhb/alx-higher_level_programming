@@ -1,3 +1,3 @@
 #!/bin/bash
 #7. Only status code
-curl -si "$1" | grep -Fi "HTTP" | cut -d " " -f2
+curl -si "$1" | grep -i "HTTP" | cut -d " " -f2
