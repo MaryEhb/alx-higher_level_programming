@@ -5,7 +5,7 @@ import urllib.request
 
 with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as res:
     body = res.read()
-    print("Body response:\n\
-    \t- type: {}\n\
-    \t- content: {}\n\
-    \t- utf8 content: {}".format(type(body), body, body.decode('utf-8')))
+    str = "Body response:\n\t- type: {}".format(type(body))
+    str += "\n\t- content: {}".format(body)
+    str += "\n\t- utf8 content: {}".format(body.decode('utf-8'))
+    print(str)
