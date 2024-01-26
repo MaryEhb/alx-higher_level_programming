@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """5. Response header value #1"""
 
-import Requests
+import requests
 import sys
 
 if __name__ == '__main__':
