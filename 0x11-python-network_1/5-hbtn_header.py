@@ -4,5 +4,6 @@
 import Requests
 import sys
 
-res = requests.get(sys.argv[1]).headers.get('X-Request-Id')
-print(res)
+if __name__ == '__main__':
+    res = requests.get(sys.argv[1]).headers.get('X-Request-Id')
+    print(res)
