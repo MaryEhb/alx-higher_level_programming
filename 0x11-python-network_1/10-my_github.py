@@ -7,5 +7,5 @@ from requests.auth import HTTPBasicAuth
 
 if __name__ == '__main__':
     credintials = HTTPBasicAuth(sys.argv[1], sys.argv[2])
-    res = requests.get("https://api.github.com/user", credintials)
+    res = requests.get("https://api.github.com/user", auth=credintials)
     print(res.json().get("id"))
