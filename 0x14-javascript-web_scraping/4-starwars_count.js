@@ -3,19 +3,24 @@
 
 const request = require('request');
 
-const url = process.argv[2];
-const characterURL = 'https://swapi-api.alx-tools.com/api/people/18/';
-request.get(url, (err, res, body) => {
-  if (err) {
-    console.error(err);
-  } else {
-    let count = 0;
-    const result = JSON.parse(body).results;
-    for (const film of result) {
-      if (film.characters.includes(characterURL)) {
-        count++;
+try {
+  const url = process.argv[2];
+
+  const characterURL = 'https://swapi-api.alx-tools.com/api/people/18/';
+  request.get(url, (err, res, body) => {
+    if (err) {
+      console.error(err);
+    } else {
+      let count = 0;
+      const result = JSON.parse(body).results;
+      for (const film of result) {
+        if (film.characters.includes(characterURL)) {
+          count++;
+        }
       }
+      console.log(count);
     }
-    console.log(count);
-  }
-});
+  });
+} catch (e) {
+  console.error(e);
+}
