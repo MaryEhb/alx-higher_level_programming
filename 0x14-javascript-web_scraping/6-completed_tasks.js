@@ -9,7 +9,7 @@ request(process.argv[2], (err, res, body) => {
   } else {
     body = JSON.parse(body);
     const obj = {};
-    for (user of body) {
+    for (const user of body) {
       if (!user.completed) {
         continue;
       }
